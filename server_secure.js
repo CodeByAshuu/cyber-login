@@ -84,4 +84,4 @@ app.get('/logout', (req, res) => {
   req.session.destroy(() => res.redirect('/login'));
 });
 
-app.listen(4000, () => console.log('SECURE server on http://localhost:
+app.listen(4000, () => console.log('SECURE server on http://localhost:4000'));

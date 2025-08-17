@@ -1,10 +1,11 @@
 {
   "name": "cyber-login",
   "version": "1.0.0",
-  "description": "",
-  "main": "server_secure.js",
+  "description": "Vulnerable login demo and secure fix (Node + SQLite)",
+  "main": "server_vuln.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:vuln": "node server_vuln.js",
+    "start:secure": "node server_secure.js"
   },
   "keywords": [],
   "author": "",

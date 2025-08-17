@@ -48,7 +48,7 @@ password: admin123
 ```bash
 http://localhost:3000/login?username=admin&password=admin123
 ```
-You'll see a welcome pagw, now logout.
+You'll see a welcome page, now logout.
 
 4. Try SQL Injection. Put these query in the password field, and type anything on the username (doesn't matter).
 ```sql
@@ -62,6 +62,15 @@ SELECT * FROM users WHERE username = 'whatever' AND password = '' OR '1'='1';
 
 5. On the other hand, if you try the same `' OR '1'='1` on the secure server `(localhost:4000)`, it should block you with something like “Invalid login.”
 
+6. Run Secure Server (localhost:4000)
+```bash
+node server_secure.js
+```
+
+Test safe login:
+- SQL injection no longer works: ' OR '1'='1 is treated as text.
+- Only valid credentials work.
+
 ---
 
-⚠️ **Important:** Mention that it’s only for **educational purposes** (since GitHub has rules about security tools). Add this line at the end of README:
+⚠️ **Important:** Mention that it’s only for **educational purposes** (since GitHub has rules about security tools).
